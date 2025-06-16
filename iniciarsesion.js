@@ -10,8 +10,9 @@ btn.onclick = (preventDefault) => {
     function traerData(data){
         data.forEach((dta) => {
             console.log(dta)
-        
-        if(inputusuario.value === dta.email && inputcontraseña.value === dta.contraseña){
+        if(inputusuario === "" || inputcontraseña === ""){
+            alert("Tiene un campo incompleto..")
+        }else if(inputusuario.value === dta.email && inputcontraseña.value === dta.contraseña){
             alert("Usuario y contraseña correctos");
             window.location.href ="index.html"
             pass

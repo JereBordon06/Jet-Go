@@ -1,10 +1,10 @@
-inputNombre = document.getElementById("nombre")
-inputApellido = document.getElementById("apellido")
-inputDni = document.getElementById("dni")
-inputPais = document.getElementById("pais")
-inputEmail = document.getElementById("email")
-inputContraseña = document.getElementById("contraseña")
-btn = document.querySelector(".btn")
+const inputNombre = document.getElementById("nombre")
+const inputApellido = document.getElementById("apellido")
+const inputDni = document.getElementById("dni")
+const inputPais = document.getElementById("pais")
+const inputEmail = document.getElementById("email")
+const inputContraseña = document.getElementById("contraseña")
+const btn = document.querySelector(".btn")
 
 
 btn.addEventListener("click", function(){
@@ -25,13 +25,13 @@ btn.addEventListener("click", function(){
   body: JSON.stringify(datos) 
   
 })
-  inputNombre.value = ""
-  inputApellido.value = ""
-  inputDni.value = ""
-  inputPais.value = ""
-  inputEmail.value = ""
-  inputContraseña.value = ""
-  
-  window.location.href ="iniciarsesion.html"
+
+  if(inputNombre.value === "" || inputApellido.value === "" || inputDni.value === "" || inputPais.value === "" || inputEmail.value === "" || inputContraseña.value === ""){
+    alert("Tiene un campo incompleto.")
+  }else{
+    alert("Se registro con exito.")
+    window.location.href ="iniciarsesion.html"
+  }
+
 })
 
